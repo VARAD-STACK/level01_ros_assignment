@@ -77,7 +77,7 @@ source ~/assignment_ws/install/setup.bash
 ros2 launch testbed_navigation navigation.launch.py
 ```
 
-In RViz2, use **2D Nav Goal** to send a goal in free space. The robot should plan around obstacles and drive toward the goal.
+In RViz2, use **2D Goal Pose** to send a goal in free space. The robot should plan around obstacles and drive toward the goal.
 
 ## Important interfaces
 
