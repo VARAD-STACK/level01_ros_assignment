@@ -33,6 +33,17 @@ Panels:
 Visualization Manager:
   Class: ""
   Displays:
+     - Alpha: 1
+      Class: rviz_default_plugins/Map
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+      Value: true
     - Alpha: 0.5
       Cell Size: 1
       Class: rviz_default_plugins/Grid
@@ -227,7 +238,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: odom
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
