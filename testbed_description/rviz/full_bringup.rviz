@@ -33,7 +33,7 @@ Panels:
 Visualization Manager:
   Class: ""
   Displays:
-     - Alpha: 1
+    - Alpha: 1
       Class: rviz_default_plugins/Map
       Enabled: true
       Name: Map
