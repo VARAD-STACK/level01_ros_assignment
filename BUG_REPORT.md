@@ -13,6 +13,8 @@ This report records defects identified by source inspection. Runtime verificatio
 | `testbed_bringup/CMakeLists.txt` | The `maps` directory was not installed with the package. The map YAML and image would be unavailable from the installed package share directory. | Install both `launch` and `maps`. |
 | `testbed_gazebo/CMakeLists.txt` | The `models` directory was used to build `GAZEBO_MODEL_PATH` but was not installed. | Install `models` with `launch` and `worlds`. |
 | `testbed_description/urdf/testbed.gazebo` | The robot declared the ROS 1 `libgazebo_ros_control.so` plugin although the simulation uses the Gazebo ROS 2 differential-drive plugin directly and no ros2_control controller setup is provided. | Remove the unused ROS 1 control plugin to avoid a missing/incompatible plugin load. |
+| `testbed_description/rviz/full_bringup.rviz` | The first Map display list item was indented one column farther than the other entries, making the YAML invalid. RViz could not load the saved display configuration, so the Map display did not subscribe to `/map`. | Align the Map list item with the other entries under `Displays`. |
+| Combined launch workflow | The simulation bringup started RViz but did not start Map Server or AMCL. | Add `testbed_navigation/full_navigation_bringup.launch.py` as an orchestration entry point that includes simulation bringup and localization without introducing a package dependency cycle. |
 
 ## Verification status
 
